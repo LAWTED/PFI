@@ -1,29 +1,18 @@
 ---
+home: true
 lang: zh-CN
-title: 页面的标题
-description: 页面的描述
----
-## hello world
-::: tip
-前往 [内置组件](../reference/components.md) 查看所有内置组件。
-
-前往 [默认主题 > 内置组件](../reference/default-theme/components.md) 查看默认主题中的所有内置组件。
-:::
-
-<CodeGroup>
-  <CodeGroupItem title="YARN" active>
-
-```bash
-yarn docs:dev
-```
-
-  </CodeGroupItem>
-
-  <CodeGroupItem title="NPM">
-
-```bash
-npm run docs:dev
-```
-
-  </CodeGroupItem>
-</CodeGroup>
+heroText: A  Personal Blog
+heroDescription: Welecome to My Zone
+heroImage: /images/logo.png
+actions:
+  - text: Get Started
+    link: /interview/
+    type: primary
+features:
+- title: A Blog
+  details: Focus on the Front-end, share my view
+- title: For Me
+  details: Study in BUPT, Work in Tencent, Dream in Paradise
+- title: For Interview
+  details: Step by Step and Everything within reach
+footer: Copyright © 2019-present Lawted / Sponsor by YY.
