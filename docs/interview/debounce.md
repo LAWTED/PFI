@@ -16,4 +16,3 @@ const debounce = ((fn,delay) => {
   let timer = setTimeout(() => fn(), delay)
 })
 ```
-![An image](./logo.png)
