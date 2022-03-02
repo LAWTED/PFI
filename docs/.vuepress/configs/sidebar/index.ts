@@ -1,9 +1,19 @@
 export const SidebarConfig = {
-  "/interview/": [
+  "/Network/": [
     {
-      text: "2022 Interview",
-      collapsible: true,
-      children: ["/interview/debounce.md", "/interview/httpvshttps.md"],
+      text: "Computer Network",
+      children: [
+        "/Network/httpvshttps.md"
+      ],
     },
   ],
+  "/JS/" : [
+    {
+      text: "Basic Javascript",
+      children: [
+        "/JS/debounce.md",
+        "/JS/arrow_function.md"
+      ]
+    }
+  ]
 };

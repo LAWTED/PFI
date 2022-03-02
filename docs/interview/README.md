@@ -1,1 +1,0 @@
-# Here is all the question what I meet in 2022

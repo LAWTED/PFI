@@ -1,18 +1,28 @@
 import { defineUserConfig } from "vuepress";
 import type { DefaultThemeOptions } from "vuepress";
-import { navbar, sidebar } from './configs'
+import { navbar } from "./configs";
+import sidebar from "./sidebar";
 export default defineUserConfig<DefaultThemeOptions>({
-  // 站点配置
   lang: "en-US",
   title: "Lawted's blog",
   description: "Welecome To My World",
-
-  // 主题和它的配置
+  plugins: [
+    [
+      "vuepress-plugin-auto-sidebar",
+      {
+        git: {
+          trackStatus: "add", // or 'commit'
+        },
+      },
+    ],
+  ],
   theme: "@vuepress/theme-default",
   themeConfig: {
     // logo: "/images/logo.png",
     navbar: navbar.NavBarConfig,
-    sidebar: sidebar.SidebarConfig,
-    repo: "https://gitlab.com/LAWTED",
+    sidebar: sidebar,
+    repo: "https://github.com/LAWTED/PFI",
+    docsBranch: "main",
+    docsDir: "docs",
   },
 });

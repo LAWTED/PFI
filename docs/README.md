@@ -1,12 +1,12 @@
 ---
 home: true
-lang: zh-CN
+lang: US
 heroText: A  Personal Blog
 heroDescription: Welecome to My Zone
 heroImage: /images/logo.png
 actions:
   - text: Get Started
-    link: /interview/
+    link: /JS/
     type: primary
 features:
 - title: A Blog
