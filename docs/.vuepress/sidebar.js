@@ -7,8 +7,7 @@ module.exports = {
       "sidebarDepth": 1,
       "children": [
         "README.md",
-        "Throttle.md",
-        "debounce.md"
+        "debounce & Throttle.md"
       ]
     }
   ],
