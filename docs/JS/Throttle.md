@@ -1,6 +1,6 @@
 # Throttle
 
-![](https://miro.medium.com/max/875/1*Q4d6AAcxvOIwnSwkTlm8GQ.png)
+![](/images/diff_debounce_throttle.png)
 
 Here is a case, if we wants to print the position of a moving div, we need the use `Throttle` and print every 10 seconds while moving
 
