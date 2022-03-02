@@ -70,6 +70,47 @@ window.addEventListener('keyup', debounce((e) => {
 2. The return funciton will take the arguments that the event handler should get - even if they aren't explicitly declared in the function.Just use `arguments`
 :::
 
+# Throttle
+
+![](/images/diff_debounce_throttle.png)
+
+Here is a case, if we wants to print the position of a moving div, we need the use `Throttle` and print every 10 seconds while moving
+
+```js
+const throttle = (fn, delay) => {
+  let timer
+  return function () {
+    if (timer) {
+      return // if there is a timer waiting just skip the create operation below
+    }
+
+    const functionCall = () => fn.apply(this, arguments)
+    timer = setTimeout(() => {
+      functionCall()
+      timer = null // clear timer after the function called
+    },delay)
+  }
+}
+```
+let's compare `throttle` and `debounce`
+```diff
+const throttle = (fn, delay) => {
+  let timer
+  return function () {
++    if (timer) {
++      return // if there is a timer waiting just skip the create operation below
++    }
+
+-    clearTimeout(timer)
+    const functionCall = () => fn.apply(this, arguments)
+    timer = setTimeout(() => {
+      functionCall()
++      timer = null // clear timer after the function called
+    },delay)
+  }
+}
+```
+
 ## Conclusion
 > This is a simple problem with a solution spanning 11 lines, but it covers a lot of different concepts that can show a deeper understanding of JavaScript if done correctly, like persisting this, returning a function, and the .apply() method, all encapsulated inside a practical problem that can be used in the real world.
 
