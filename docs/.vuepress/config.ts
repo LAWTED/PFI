@@ -9,11 +9,9 @@ export default defineUserConfig<DefaultThemeOptions>({
   plugins: [
     [
       "vuepress-plugin-auto-sidebar",
-      {
-        git: {
-          trackStatus: "add", // or 'commit'
-        },
-      },
+    ],
+    [
+      '@vuepress/plugin-search',
     ],
   ],
   theme: "@vuepress/theme-default",

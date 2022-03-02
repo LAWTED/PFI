@@ -42,8 +42,8 @@ what if we need pass the arguments? Then we need to `apply` the function
 const debounce = (fn, delay) => {
   let timer
   return function () {
-    const functionCall = () => fn.apply(this, arguments)
     clearTimeout(timer)
+    const functionCall = () => fn.apply(this, arguments)
     timer = setTimeout(functionCall, delay)
   }
 }
