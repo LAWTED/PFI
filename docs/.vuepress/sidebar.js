@@ -1,15 +1,4 @@
 module.exports = {
-  "/JS/Throttle/": [
-    {
-      "text": "Throttle",
-      "title": "Throttle",
-      "collapsable": false,
-      "sidebarDepth": 1,
-      "children": [
-        "index.md"
-      ]
-    }
-  ],
   "/JS/": [
     {
       "text": "JS",
@@ -18,6 +7,7 @@ module.exports = {
       "sidebarDepth": 1,
       "children": [
         "README.md",
+        "Throttle.md",
         "debounce.md"
       ]
     }
