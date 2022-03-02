@@ -1,1 +1,1 @@
-### Basic JS is the only difference between Senior Front-End Engineer and Intern
+# Basic JavaScript

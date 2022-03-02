@@ -1,13 +1,14 @@
-# Debounce
+# Debounce & Throttle
+## Debounce
 
 > Trigger the function in N sec, but if it's triggered again in N sec, then restart the timer, Or we want to save changes on a form, but only when the user is not actively working on those changes, as every "save" costs a database trip
-## Loadash
+### Loadash
 [debounce in loadash](https://lodash.com/docs/4.17.15#debounce)
 ```js
 _.debounce(saveInput, 300);
 ```
 
-## Simple Implementation
+### Simple Implementation
 
 ``` js
 var timer;
@@ -27,7 +28,7 @@ document.onmousemove = () => {
 ```
 But here is a problem, `timer` is in the parent scope and in order to implement into a single function, we use `closure` to solve the problem
 
-## Optimized Code
+### Optimized Code
 ```js
 const debounce = (fn, delay) => {
   let timer
@@ -56,7 +57,7 @@ window.addEventListener('keyup', debounce((e) => {
 }, 1000));
 ```
 
-## Step by Step
+### Step by Step
 
 1. Create a wrapper function with two arguments (fn, delay)
 2. Declare the `timer` variable, which will be undefined til is set in the returned funciton
@@ -70,7 +71,7 @@ window.addEventListener('keyup', debounce((e) => {
 2. The return funciton will take the arguments that the event handler should get - even if they aren't explicitly declared in the function.Just use `arguments`
 :::
 
-# Throttle
+## Throttle
 
 ![](/images/diff_debounce_throttle.png)
 
@@ -92,6 +93,7 @@ const throttle = (fn, delay) => {
   }
 }
 ```
+### Diff
 let's compare `throttle` and `debounce`
 ```diff
 const throttle = (fn, delay) => {
