@@ -49,6 +49,16 @@ const debounce = (fn, delay) => {
   }
 }
 ```
+Or we can pass `...args` to the function
+```js
+const debounce = (fn, delay) => {
+  let timer
+  return function (...args) {
+    clearTimeout(timer)
+    timer = setTimeout(() => fn(...args), delay)
+  }
+} 
+```
 
 Using the function
 ```js
