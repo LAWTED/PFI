@@ -62,9 +62,12 @@ const debounce = (fn, delay) => {
 
 Using the function
 ```js
-window.addEventListener('keyup', debounce((e) => {
-  console.log(e);
-}, 1000));
+button.addEventListener(
+  "click",
+  debounce((e) => {
+    console.log(e);
+  }, 500)
+);
 ```
 
 ### Step by Step
