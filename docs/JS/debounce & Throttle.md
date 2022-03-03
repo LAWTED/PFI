@@ -57,7 +57,7 @@ const debounce = (fn, delay) => {
     clearTimeout(timer)
     timer = setTimeout(() => fn(...args), delay)
   }
-} 
+}
 ```
 
 Using the function
@@ -69,7 +69,43 @@ button.addEventListener(
   }, 500)
 );
 ```
+Total Code
+```js
+const button = document.getElementById("button");
 
+// debounce handler
+const debounce = (fn, delay) => {
+  let timer
+  console.log('1')
+  return function (...args) {
+    console.log('2')
+    clearTimeout(timer)
+    timer = setTimeout(() => fn(...args), delay)
+  }
+}
+
+button.addEventListener(
+  "click",
+  debounce((e) => {
+    console.log(e);
+  }, 500)
+);
+```
+
+Output
+``` js
+1
+2
+2
+2
+2
+2
+PointerEvent {isTrusted: true, pointerId: 1, width: 1, height: 1, pressure: 0, …}
+```
+::: tip
+* We can see there is only one `1` which means timer only have 1, because `addEventListener` bind the `button` then `debounce` function moves and get a `return function` which is **actualy** bind with the button (if we call the return funtion of debounce is `R` and `R` is the function that will be operate everytime when the button was clicked, **not debounce funtion**), and each time we click the funtion will log a `2` but `timer` is been kept because of the closure
+* `...args` will collect the rest arguments, we will discuss the difference between `...args` and `agruments` later
+:::
 ### Step by Step
 
 1. Create a wrapper function with two arguments (fn, delay)
