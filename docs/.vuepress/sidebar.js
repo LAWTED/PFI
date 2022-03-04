@@ -1,4 +1,16 @@
 module.exports = {
+  "/BUPT/": [
+    {
+      "text": "BUPT",
+      "title": "BUPT",
+      "collapsable": false,
+      "sidebarDepth": 1,
+      "children": [
+        "README.md",
+        "encodeInp.md"
+      ]
+    }
+  ],
   "/JS/": [
     {
       "text": "JS",

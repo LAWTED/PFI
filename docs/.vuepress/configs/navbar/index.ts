@@ -7,4 +7,8 @@ export const NavBarConfig = [
     text: "JS",
     link: "/JS/",
   },
+  {
+    text: "BUPT",
+    link: "/BUPT/"
+  }
 ];
