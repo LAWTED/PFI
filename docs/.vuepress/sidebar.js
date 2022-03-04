@@ -19,7 +19,9 @@ module.exports = {
       "sidebarDepth": 1,
       "children": [
         "README.md",
-        "debounce & Throttle.md"
+        "arrow Fuction.md",
+        "debounce & Throttle.md",
+        "let & var.md"
       ]
     }
   ],
@@ -31,7 +33,7 @@ module.exports = {
       "sidebarDepth": 1,
       "children": [
         "README.md",
-        "httpsvshttps.md"
+        "https vs https.md"
       ]
     }
   ]
