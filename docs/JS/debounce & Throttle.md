@@ -38,7 +38,7 @@ const debounce = (fn, delay) => {
   }
 }
 ```
-what if we need pass the arguments? Then we need to `apply` the function
+#### what if we need pass the arguments? Then we need to `apply` the function
 ```js
 const debounce = (fn, delay) => {
   let timer
@@ -49,7 +49,7 @@ const debounce = (fn, delay) => {
   }
 }
 ```
-Or we can pass `...args` to the function
+#### Or we can pass `...args` to the function
 ```js
 const debounce = (fn, delay) => {
   let timer
@@ -60,7 +60,7 @@ const debounce = (fn, delay) => {
 }
 ```
 
-Using the function
+#### Using the function
 ```js
 button.addEventListener(
   "click",
@@ -69,7 +69,7 @@ button.addEventListener(
   }, 500)
 );
 ```
-Total Code
+#### Total Code
 ```js
 const button = document.getElementById("button");
 
@@ -92,7 +92,7 @@ button.addEventListener(
 );
 ```
 
-Output
+#### Output
 ``` js
 1
 2
