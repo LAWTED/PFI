@@ -1,4 +1,5 @@
 # let
+let is not generate in the `window` object
 ```js
 var scope1 = 'global'
 let scope2 = 'global'
