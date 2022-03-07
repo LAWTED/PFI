@@ -19,6 +19,7 @@ module.exports = {
       "sidebarDepth": 1,
       "children": [
         "README.md",
+        "Hoisting.md",
         "arrow Fuction.md",
         "debounce & Throttle.md",
         "let & var.md"
