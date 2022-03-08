@@ -20,7 +20,9 @@ module.exports = {
       "children": [
         "README.md",
         "Hoisting.md",
+        "Promise.md",
         "arrow Fuction.md",
+        "async & await.md",
         "debounce & Throttle.md",
         "let & var.md"
       ]
