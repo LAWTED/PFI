@@ -4,6 +4,10 @@ export const NavBarConfig = [
     link: "/Network/",
   },
   {
+    text: "OS",
+    link: "/OperatingSystem/",
+  },
+  {
     text: "JS",
     link: "/JS/",
   },

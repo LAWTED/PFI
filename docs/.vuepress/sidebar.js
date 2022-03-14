@@ -41,13 +41,14 @@ module.exports = {
       ]
     }
   ],
-  "/Operating System/": [
+  "/OperatingSystem/": [
     {
       "text": "Operating System",
       "title": "Operating System",
       "collapsable": false,
       "sidebarDepth": 1,
       "children": [
+        "README.md",
         "process & thread.md"
       ]
     }

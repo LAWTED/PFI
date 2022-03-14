@@ -8,6 +8,9 @@ actions:
   - text: Get Started
     link: /JS/
     type: primary
+  - text: Resume
+    link: https://github.com/LAWTED/resume/blob/master/README.md
+    type: secondary
 features:
 - title: A Blog
   details: Focus on the Front-end, share my view
