@@ -40,5 +40,16 @@ module.exports = {
         "https vs https.md"
       ]
     }
+  ],
+  "/Operating System/": [
+    {
+      "text": "Operating System",
+      "title": "Operating System",
+      "collapsable": false,
+      "sidebarDepth": 1,
+      "children": [
+        "process & thread.md"
+      ]
+    }
   ]
 };
