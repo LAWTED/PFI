@@ -14,5 +14,5 @@ features:
 - title: For Me
   details: Study in BUPT, Work in Tencent, Dream in Paradise
 - title: For Interview
-  details: Step by Step and Everything within reach
+  details: Aim at the Sun, land on the Moon.
 footer: Copyright © 2019-present Lawted / Sponsor by YY.
