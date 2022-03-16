@@ -7,12 +7,11 @@ export default defineUserConfig<DefaultThemeOptions>({
   title: "Lawted's blog",
   description: "Welecome To My World",
   plugins: [
-    [
-      "vuepress-plugin-auto-sidebar",
-    ],
-    [
-      '@vuepress/plugin-search',
-    ],
+    ["vuepress-plugin-auto-sidebar"],
+    ["@vuepress/plugin-search"],
+    ["vuepress-plugin-mermaidjs"],
+    ["@renovamen/vuepress-plugin-mermaid"]
+
   ],
   theme: "@vuepress/theme-default",
   themeConfig: {

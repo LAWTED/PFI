@@ -24,7 +24,8 @@ module.exports = {
         "arrow Fuction.md",
         "async & await.md",
         "debounce & Throttle.md",
-        "let & var.md"
+        "let & var.md",
+        "prototype.md"
       ]
     }
   ],
