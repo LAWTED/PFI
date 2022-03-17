@@ -20,6 +20,7 @@ module.exports = {
       "children": [
         "README.md",
         "Hoisting.md",
+        "Inheritance.md",
         "Promise.md",
         "arrow Fuction.md",
         "async & await.md",
