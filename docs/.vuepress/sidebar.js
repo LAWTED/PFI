@@ -53,5 +53,17 @@ module.exports = {
         "process & thread.md"
       ]
     }
+  ],
+  "/Resume/": [
+    {
+      "text": "Resume",
+      "title": "Resume",
+      "collapsable": false,
+      "sidebarDepth": 1,
+      "children": [
+        "README.md",
+        "Chinese Version.md"
+      ]
+    }
   ]
 };

@@ -14,5 +14,9 @@ export const NavBarConfig = [
   {
     text: "BUPT",
     link: "/BUPT/"
+  },
+  {
+    text: "Resume",
+    link: "/Resume/"
   }
 ];

@@ -9,7 +9,7 @@ actions:
     link: /JS/
     type: primary
   - text: Resume
-    link: https://github.com/LAWTED/resume/blob/master/README.md
+    link: /Resume/
     type: secondary
 features:
 - title: A Blog
