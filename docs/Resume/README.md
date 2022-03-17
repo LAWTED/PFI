@@ -1,6 +1,4 @@
-<center>
-    <h1>Mingze Wu</h1>
-  </center>
+   # Mingze Wu
 
   ## Personal Information
 
