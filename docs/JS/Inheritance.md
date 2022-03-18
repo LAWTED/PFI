@@ -18,8 +18,10 @@ console.log(child1.getName()) // Lawted
 Attribute of reference types are shared by all instances, which means once you modify it, other will be modified also
 
 ```js
+let i = 0
 function Parent() {
   this.names = ['Lawted', 'Wu']
+  i += 1
 }
 function Child() {
   this.age = 5
@@ -32,6 +34,7 @@ console.log(child1.names) // ['Lawted', 'Wu', 'child1']
 let child2 = new Child()
 console.log(child2.names) // ['Lawted', 'Wu', 'child1']
 console.log(Child.prototype)
+console.log(i) // 1
 ```
 :::tip Disadvantage
 * Attribute of reference types are shared by all instances
@@ -57,9 +60,11 @@ console.log(child2.name) // ['Lawted', 'Wu', 'Child2']
 and it avoid to share the property, also can pass args to Parent, if we `console.log(child1)` we can find the object has its own property name which is different from the prototype case
 
 ```js
+let i = 0
 function Parent (name) {
     this.name = name;
     this.setName = () => {}
+    i += 1
 }
 Parent.prototype.setAge = function () {}
 function Child (name) {
@@ -67,10 +72,9 @@ function Child (name) {
 }
 var child1 = new Child('kevin');
 console.log(child1.name); // kevin
-console.log(child1) // has setName()
 var child2 = new Child('daisy');
 console.log(child2.name); // daisy
-console.log(child2) // also has setName()
+console.log(i) // 2
 ```
 :::tip Disadvantage
 Each subclass has a copy of the parent class instance function, which affects performance
@@ -78,7 +82,9 @@ Each subclass has a copy of the parent class instance function, which affects pe
 ## Combination Inheritance
 Combination Inheritance use prototye and call together. Use `call()` to get each child a `colors` attribute and use prototype
 ```js
+let i = 0
 function Parent () {
+  i += 1
   this.colors = ['red', 'blue', 'yellow']
 }
 function Child(name) {
@@ -101,4 +107,6 @@ console.log(child2)
 //   "colors": ["red","blue","yellow","green"],
 //   "name": "Wu"
 // }
+console.log(i) // 3
 ```
+In any case, the parent constructor is called twice: once when the child's prototype is created, and once inside the child's constructor
