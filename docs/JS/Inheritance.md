@@ -142,3 +142,95 @@ console.log(person2.colors)
 :::tip
 when we set `person1.name`, the `person1.__proto__` has `name` and person1 do not has `name`, so added the name value to person1 instead of modifying the name value on the prototype
 :::
+
+## Parasitic Compositional Inheritance
+<CodeGroup>
+  <CodeGroupItem title="Regular">
+
+```js
+let i = 0
+function Parent (name) {
+  i += 1
+  this.name = name
+  this.colors = ['red', 'blue', 'green']
+}
+Parent.prototype.getName = function () {
+  console.log(this.name)
+}
+function Child (name, age) {
+  Parent.call(this, name)
+  this.age = age
+}
+
+
+Child.prototype = new Parent()
+let child1 = new Child('Lawted', '18')
+console.log(child1, Child.prototype)
+console.log(i) // 2
+```
+
+  </CodeGroupItem>
+
+  <CodeGroupItem title="Optimized" active>
+
+```js
+let i = 0
+function Parent (name) {
+  i += 1
+  this.name = name
+  this.colors = ['red', 'blue', 'green']
+}
+Parent.prototype.getName = function () {
+  console.log(this.name)
+}
+function Child (name, age) {
+  Parent.call(this, name)
+  this.age = age
+}
+var F = function () {}
+F.prototype = Parent.prototype
+Child.prototype = new F()
+let child1 = new Child('Lawted', '18')
+console.log(child1, Child.prototype)
+console.log(i) // 1
+```
+  </CodeGroupItem>
+
+</CodeGroup>
+
+`console.log(i)` equals to 2 in `Regular` beacause
+```js
+Child.prototype = new Parent()
+let child1 = new Child('Lawted', '18')
+```
+:::tip
+child1 has `colors` and Child.prototype also have `colors` which is useless
+:::
+
+
+
+`console.log(i)` equals to 1 in `Regular` beacause
+```js
+F.prototype = Parent.prototype
+```
+and when we new F() F is an empty function
+
+
+
+
+
+```mermaidjs
+graph LR
+  A(Parent) --> |prototype|B(Person.prototype)
+  C(Child.prototype) -->|__proto__|B
+  D(child1) --> |__proto__|C
+```
+
+```mermaidjs
+graph LR
+  A(Parent) --> |prototype|B(Person.prototype)
+  F(F.prototype) --> |__proto__|B
+  C(Child.prototype) -->|__proto__|F
+  D(child1) --> |__proto__|C
+```
+as we can see we use a empty function and let `child.prototype` access `parent.prototype` indirectly

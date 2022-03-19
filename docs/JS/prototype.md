@@ -113,8 +113,6 @@ the `__proto__` of Object.prototype is null, which means it is not exist
 ## Prototype Chain
 here the prototype chain
 ```mermaidjs
-%%{init: {'theme': 'dark'}%%
-
 graph LR
   A(person) --> |__proto__ |B(Person.prototype)
   B --> |__proto__| C(Object.prototype)
