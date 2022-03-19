@@ -55,7 +55,7 @@ graph LR
 ## Constructor
 Every prototype has a constructor property point to the construct function
 ```js
-funciton Person() {
+function Person() {
 
 }
 console.log(Person == Person.prototype.constructor) // true

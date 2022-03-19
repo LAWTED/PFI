@@ -9,9 +9,15 @@ export default defineUserConfig<DefaultThemeOptions>({
   plugins: [
     ["vuepress-plugin-auto-sidebar"],
     ["@vuepress/plugin-search"],
-    ["vuepress-plugin-mermaidjs"],
-    ["@renovamen/vuepress-plugin-mermaid"]
-
+    [
+      "@renovamen/vuepress-plugin-mermaid",
+      {
+        theme: "default",
+        darkTheme: "dark",
+        darkSelector: "html",
+        darkClass: "dark",
+      },
+    ],
   ],
   theme: "@vuepress/theme-default",
   themeConfig: {

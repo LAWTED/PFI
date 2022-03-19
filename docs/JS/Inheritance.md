@@ -110,3 +110,35 @@ console.log(child2)
 console.log(i) // 3
 ```
 In any case, the parent constructor is called twice: once when the child's prototype is created, and once inside the child's constructor
+
+## Object.create()
+```js
+function createObj(o) {
+  function F() {}
+  F.prototype = o
+  return new F()
+}
+```
+:::tip disadvantage
+Property values that contain reference types always share the corresponding value, just like prototype chain inheritance
+:::
+```js
+function createObj(o) {
+  function F() {}
+  F.prototype = o
+  return new F()
+}
+let person = {
+  name: 'Lawted',
+  colors: ['red', 'yellow']
+}
+let person1 = createObj(person)
+let person2 = createObj(person)
+person1.name = 'person1'
+console.log(person1,person2)
+person1.colors.push('black')
+console.log(person2.colors)
+```
+:::tip
+when we set `person1.name`, the `person1.__proto__` has `name` and person1 do not has `name`, so added the name value to person1 instead of modifying the name value on the prototype
+:::
