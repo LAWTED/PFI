@@ -19,6 +19,7 @@ export default defineUserConfig<DefaultThemeOptions>({
       },
     ],
   ],
+  port: 1234,
   theme: "@vuepress/theme-default",
   themeConfig: {
     // logo: "/images/logo.png",
