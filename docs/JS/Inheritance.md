@@ -234,3 +234,27 @@ graph LR
   D(child1) --> |__proto__|C
 ```
 as we can see we use a empty function and let `child.prototype` access `parent.prototype` indirectly
+
+## ES6 Class
+```js
+class Person {
+  constructor(name, age) {
+    this.name = name
+    this.age = age
+  }
+  showName() {
+    console.log(this.name, 'Person')
+  }
+}
+
+class Student extends Person {
+  constructor (name, age, id) {
+    super(name,age)
+    this.id = id
+  }
+}
+let student1 = new Student('Lawted', 18, '001')
+console.log(student1)
+student1.showName() // Lawted Person
+```
+call the constructor of the parent class through `super`
