@@ -24,9 +24,11 @@ module.exports = {
         "Promise.md",
         "arrow Fuction.md",
         "async & await.md",
+        "closure.md",
         "debounce & Throttle.md",
         "let & var.md",
-        "prototype.md"
+        "prototype.md",
+        "this.md"
       ]
     }
   ],

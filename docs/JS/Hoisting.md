@@ -4,9 +4,11 @@
 ```js
 console.log(a) //[Function: a]
 var a
-function a(){}
+function a(){
+  console.log('hello')
+}
 ```
-the funciton declaration also will be hoisted and higher priority than variable, hence we show it at the begining
+the funciton declaration also will be hoisted and higher priority than variable, like copy and paste to the top, hence we show it at the begining
 
 ## Simple Example
 <CodeGroup>
@@ -54,7 +56,7 @@ test(10)
 ```js
 function test(v) {
   var v = 10
-  var v
+  var v // passed
   console.log(v) // 10
   v = 3
 }
@@ -101,3 +103,11 @@ let foo = 6
 // Uncaught ReferenceError: Cannot access 'foo' before initialization
 }
 ```
+
+## declare with no var
+```js
+console.log(a)
+a = 1
+// VM35:1 Uncaught ReferenceError: a is not defined
+```
+declare without var won't hoisting
