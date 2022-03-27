@@ -53,9 +53,9 @@ const p1 = new Promise((resolve,reject) => {
 console.log(p1)
 // promise init
 // Promise {<pending>}
-// [[Prototype]]: Promise
-// [[PromiseState]]: "fulfilled"
-// [[PromiseResult]]: undefined
+//    [[Prototype]]: Promise
+//    [[PromiseState]]: "fulfilled"
+//    [[PromiseResult]]: undefined
 ```
 why the Promise is pending but when we see the object is fulfilled, because whe promise is init and resolve 1000 ms later, hence the right correct execution order is
 1. `console.log('promise init')`

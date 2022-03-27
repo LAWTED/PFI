@@ -43,6 +43,28 @@ test4() // 4
 ```
 await will capsulate `4` as Promise.resolve(4)
 
+### await + after console
+```js
+async function test4() {
+  await 4
+  console.log('async') // Promise.resolve(4).then(() => console.log('async'))
+}
+test4() // 4
+```
+hence the `console` after the `await` is a async micro task
+
+```js
+async function async1() {
+  console.log('async1 start') // sync
+  await async2() // sync
+  console.log('async1 end') // micro
+}
+async function async2() {
+  console.log('async2') //sync
+}
+```
+the `console` after the wait is the micro task which can be seen like `promise.resolve(async2()).then(console.log('async1 end')` and async2 is a sync function but `console.log('async2')` is sync
+
 ### await + async function
 ```js
 async function test1() {

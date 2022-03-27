@@ -26,6 +26,7 @@ module.exports = {
         "async & await.md",
         "closure.md",
         "debounce & Throttle.md",
+        "event loop.md",
         "let & var.md",
         "prototype.md",
         "this.md"
