@@ -27,6 +27,7 @@ module.exports = {
         "closure.md",
         "debounce & Throttle.md",
         "event loop.md",
+        "isArray.md",
         "let & var.md",
         "prototype.md",
         "this.md"
@@ -67,6 +68,17 @@ module.exports = {
       "children": [
         "README.md",
         "Chinese Version.md"
+      ]
+    }
+  ],
+  "/Vue/": [
+    {
+      "text": "Vue",
+      "title": "Vue",
+      "collapsable": false,
+      "sidebarDepth": 1,
+      "children": [
+        "proxy.md"
       ]
     }
   ]

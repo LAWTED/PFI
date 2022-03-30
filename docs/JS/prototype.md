@@ -58,6 +58,9 @@ Every prototype has a constructor property point to the construct function
 function Person() {
 
 }
+const person = new Person()
+console.log(person) // constructor is on person.__proto__
+console.log(Person == person.constructor)
 console.log(Person == Person.prototype.constructor) // true
 ```
 
@@ -83,7 +86,7 @@ delete person.name
 console.log(person.name) // not find keep searching till find Lawted
 ```
 
-:::error
+::: tip
 Wait... What is the prototype of the Person.prototype
 :::
 
