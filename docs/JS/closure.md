@@ -39,7 +39,7 @@ const fn = foo()
 const a = 2
 fn() // '1'
 ```
-closre  = function `foo`  + free variable `a` (when defined)
+closre  = function `foo`  + free variable `a` ==(when defined)==
 
 ## funciton as parameter
 
@@ -54,7 +54,7 @@ function fn() {
 }
 foo(fn) // a 2
 ```
-closre  = function `foo`  + free variable `a` (when defined)
+closre  = function `foo`  + free variable `a` ==(when defined)==
 ## code of debounce
 ```js
 const button = document.getElementById("button");
