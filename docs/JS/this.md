@@ -12,6 +12,60 @@ test.apply({name: 'Lawted'}) // {name: 'Lawted'}
 const boundTest = test.bind({name: 'Lawted'})
 bounTest() //{name:'Lawted'}
 ```
+## 4 ways to bind this
+### default binding
+when the function is called directly, this is the window object
+```js
+function foo() {
+  console.log(this)
+}
+foo() // Window
+```
+
+### implicit binding
+`this` points to its caller
+```js
+function foo() {
+  console.log(this)
+}
+const obj = {
+  x: 1,
+  foo
+}
+obj.foo() //obj
+foo() // Window
+```
+
+```js
+const obj = {
+    a: function () {
+        console.log(this) // obj
+        function b () {
+            console.log(this) // window
+        }
+        b()
+    }
+}
+obj.a()
+```
+`b()` is called directly and no prefix, hence `this` in `b()` is window
+
+### new binding
+```js
+function test() {
+  this.x = 1
+}
+const obj = new test()
+obj.x // 1
+```
+4 things a `new` did:
+1. create a new object
+2. make `this` points to the object(also can say make obj.__proto__ = test.prototype)
+3. do the things in the function(set the attribute)
+4. return obj if the function return a obj, else return the obj created before
+
+### call/bind/apply
+we introduce them in a new page!
 ## class
 ```js
 class Person{
