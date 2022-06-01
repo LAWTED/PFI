@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x] # 配置所需node版本
+        node-version: [16.x] # 配置所需node版本
     steps: # 自动化步骤
       - uses: actions/checkout@v2 # 第一步，检出仓库副本
       - name: Use Node.js ${{ matrix.node-version }}
