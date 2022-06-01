@@ -42,6 +42,7 @@ module.exports = {
       "sidebarDepth": 1,
       "children": [
         "README.md",
+        "Cache.md",
         "cookie & session & token.md",
         "https vs https.md"
       ]
