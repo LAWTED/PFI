@@ -15,8 +15,10 @@ graph LR
 
 # Micro Task and Macro Task
 
-**macro task will execute after all the micro task is done*8
+**macro task will execute after all the micro task is done**
+
 micro task: Promise.then catch finally (ES6)
+
 macro task: setTimeout/setTimeInterval, requestAnimationFrame, I/O (webAPIS)
 
 ## why Micro Task is faster than Macro Task
